@@ -14,6 +14,8 @@ e_emit_log = "rabbit.exchange.emit_log:run"
 e_receive_logs = "rabbit.exchange.receive_logs:run"
 r_receive_logs_direct = "rabbit.routing.receive_logs_direct:run"
 r_emit_log_direct = "rabbit.routing.emit_log_direct:run"
+t_receive_logs_topic = "rabbit.topic.receive_logs_topic:run"
+t_emit_log_topic = "rabbit.topic.emit_log_topic:run"
 
 [tool.poetry.dependencies]
 python = "^3.10"
