@@ -12,6 +12,8 @@ q_consumer = "rabbit.queue.consumer:run"
 q_producer = "rabbit.queue.producer:run"
 e_emit_log = "rabbit.exchange.emit_log:run"
 e_receive_logs = "rabbit.exchange.receive_logs:run"
+r_receive_logs_direct = "rabbit.routing.receive_logs_direct:run"
+r_emit_log_direct = "rabbit.routing.emit_log_direct:run"
 
 [tool.poetry.dependencies]
 python = "^3.10"
