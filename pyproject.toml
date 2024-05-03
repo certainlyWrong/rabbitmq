@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "rabbit"
+version = "0.1.0"
+description = ""
+authors = ["Adriano R. de Sousa <adrianorodriguesdsousa@ufpi.edu.br>"]
+readme = "README.md"
+license = "MIT"
+
+
+[tool.poetry.scripts]
+q-consumer = "rabbit.queue.consumer:run"
+q-producer = "rabbit.queue.producer:run"
+e-emit_log = "rabbit.exchange.emit_log:run"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pika = "^1.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
