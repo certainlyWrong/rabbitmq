@@ -10,10 +10,6 @@ def run():
     channel.exchange_declare(
         exchange='logs',
         exchange_type='fanout',
-        durable=True,
-        auto_delete=False,
-        internal=False,
-        arguments=None,
     )
 
     result = channel.queue_declare(
@@ -34,7 +30,7 @@ def run():
     try:
         count = 0
         while True:
-            time.sleep(0.5)
+            time.sleep(1)
             print(f" [x] Sending {count}")
             channel.basic_publish(
                 exchange='logs',

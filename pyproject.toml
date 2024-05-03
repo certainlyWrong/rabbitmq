@@ -8,9 +8,10 @@ license = "MIT"
 
 
 [tool.poetry.scripts]
-q-consumer = "rabbit.queue.consumer:run"
-q-producer = "rabbit.queue.producer:run"
-e-emit_log = "rabbit.exchange.emit_log:run"
+q_consumer = "rabbit.queue.consumer:run"
+q_producer = "rabbit.queue.producer:run"
+e_emit_log = "rabbit.exchange.emit_log:run"
+e_receive_logs = "rabbit.exchange.receive_logs:run"
 
 [tool.poetry.dependencies]
 python = "^3.10"
