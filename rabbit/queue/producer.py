@@ -4,8 +4,11 @@ import random
 
 
 def run():
+    # host = 'orangepi'
+    # host = 'localhost:5672'
+    host = 'localhost'
     connection = pika.BlockingConnection(
-        pika.ConnectionParameters('orangepi'))
+        pika.ConnectionParameters(host))
     channel = connection.channel()
 
     channel.queue_declare(

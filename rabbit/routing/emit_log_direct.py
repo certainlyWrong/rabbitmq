@@ -5,8 +5,10 @@ import random
 
 def run():
     try:
+        # host = 'orangepi'
+        host = 'localhost'
         connection = pika.BlockingConnection(
-            pika.ConnectionParameters(host='orangepi'))
+            pika.ConnectionParameters(host=host))
         channel = connection.channel()
 
         channel.exchange_declare(

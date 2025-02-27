@@ -11,8 +11,11 @@ def run():
         ch.basic_ack(delivery_tag=method.delivery_tag)
 
     try:
+        # host = 'orangepi'
+        # host = 'localhost:5672'
+        host = 'localhost'
         connection = pika.BlockingConnection(
-            pika.ConnectionParameters('orangepi')
+            pika.ConnectionParameters(host)
         )
 
         channel = connection.channel()

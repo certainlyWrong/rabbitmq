@@ -4,8 +4,11 @@ import sys
 
 def run():
     try:
+        # host = 'orangepi'
+        # host = 'localhost:5672'
+        host = 'localhost'
         connection = pika.BlockingConnection(
-            pika.ConnectionParameters(host='orangepi'))
+            pika.ConnectionParameters(host=host))
         channel = connection.channel()
 
         channel.exchange_declare(exchange='topic_logs', exchange_type='topic')
